@@ -15,7 +15,7 @@ func main() {
 	file, err := os.Open("1_calibration.txt")
 	//file, err := os.Open("1_example1.txt") // 142, sans substitutions
 	if err != nil {
-		fmt.Println("Erreur lors de l'ouverture du fichier: ", err)
+		fmt.Println("Erreur lors de l'ouverture du fichier:", err)
 		return
 	}
 	defer file.Close()
@@ -41,17 +41,17 @@ func main() {
 
 			lineFinal, _ := strconv.Atoi(matches[1] + matches[2])
 			total += lineFinal
-			//fmt.Println(lineNum, " - ", total, " - ", lineFinal)
+			//fmt.Println(lineNum, "-", total, "-", lineFinal)
 		} else {
-			fmt.Println("Erreur ligne ", lineNum)
+			fmt.Println("Erreur ligne", lineNum)
 			return
 		}
 	}
 
 	if err := scanner.Err(); err != nil {
-		fmt.Println("Erreur lors de la lecture du fichier: ", err)
+		fmt.Println("Erreur lors de la lecture du fichier:", err)
 		return
 	}
 
-	fmt.Println("Total: ", total)
+	fmt.Println("Total:", total)
 }
