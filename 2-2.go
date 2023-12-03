@@ -9,6 +9,8 @@ import (
 	"strings"
 )
 
+// https://adventofcode.com/2023/day/2
+
 func main() {
 	file, err := os.Open("2_games.txt") // 63307
 	//file, err := os.Open("2_example1.txt") // 2286

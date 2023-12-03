@@ -9,10 +9,9 @@ import (
 )
 
 // https://adventofcode.com/2023/day/1
-// Sans les substitutions (partie 1) : 57346
 
 func main() {
-	file, err := os.Open("1_calibration.txt")
+	file, err := os.Open("1_calibration.txt") // 57346
 	//file, err := os.Open("1_example1.txt") // 142, sans substitutions
 	if err != nil {
 		fmt.Println("Erreur lors de l'ouverture du fichier:", err)
