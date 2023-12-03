@@ -34,6 +34,7 @@ func main() {
 		matches := reFinalMatch.FindStringSubmatch(line)
 
 		if matches != nil {
+			// S'il n'y a qu'un seul nombre, il est à la fois le premier et le dernier
 			if matches[2] == "" {
 				matches[2] = matches[1]
 			}

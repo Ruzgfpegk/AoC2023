@@ -38,10 +38,9 @@ func main() {
 
 		// Remplacement de texte
 		for i := 0; i < len(line); i++ { // Itération dans la ligne
-			//subLine = line[i:] // On commence la recherche à la colonne actuelle
 			for j := 0; j < 9; j++ { // Itération dans les nombres
 				if strings.Index(line, numsLong[j]) == i {
-					line = strings.ReplaceAll(line, numsLong[j], numsShort[j]) // Injection du nombre court
+					line = strings.ReplaceAll(line, numsLong[j], numsShort[j]) // Injection du nombre raccourci
 				}
 			}
 		}
@@ -49,6 +48,7 @@ func main() {
 		matches := reFinalMatch.FindStringSubmatch(line)
 
 		if matches != nil {
+			// S'il n'y a qu'un seul nombre, il est à la fois le premier et le dernier
 			if matches[2] == "" {
 				matches[2] = matches[1]
 			}
